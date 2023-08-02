@@ -1,0 +1,1289 @@
+---------- 进入parse_job_file01(trace_file)函数-----------------
+---------- Read TF jobs from 从以下输入文档阅读: input/input01/60_job.csv-------------------------
+---------- we get the following fields 读取60_job.csv的抬头/keys:
+----------['job_id', 'num_gpu', 'submit_time', 'iterations', 'model_name', 'duration', 'interval']----------
+No model match, pick inception3
+没有匹配到的model_name是 googlenet
+No model match, pick inception3
+没有匹配到的model_name是 googlenet
+No model match, pick inception3
+没有匹配到的model_name是 googlenet
+No model match, pick inception3
+没有匹配到的model_name是 googlenet
+No model match, pick inception3
+没有匹配到的model_name是 googlenet
+No model match, pick inception3
+没有匹配到的model_name是 googlenet
+----------进入sort_all_jobs(self, mode=None)
+   Jobs are sorted with their start time
+----------离开sort_all_jobs(self, mode=None)
+---------- Get 60 TF jobs in total； 把所有jobs都从60_job.csv里面读出来了 ----------------------------------
+---------- 离开parse_job_file01(trace_file)函数-----------------
+---------- 进入parse_cluster_spec01()函数
+---------- FLAGS01.cluster_spec为 input/input01/n2g8.csv
+['num_switch', 'num_node_p_switch', 'num_gpu_p_node', 'num_cpu_p_node', 'mem_p_node']
+num_switch: 1
+num_node_p_switch: 2
+num_gpu_p_node: 8
+num_cpu_p_node: 64
+mem_p_node: 2048
+---------- 进入 CLUSTER01.init_infra() 
+---------- Init and create cluster infration entities (switches, nodes) 
+---------- by using class _Switch, _Node
+  Switch[0] has 2 nodes
+ Node[0] has 8 gpus, 64 cpus, 2048 G memory
+ Node[1] has 8 gpus, 64 cpus, 2048 G memory
+Cluster is ready to use
+Cluster Spec
+#ofswitch: 1, #ofnode: 2, #ofgpu: 16, #ofcpu: 128, #ofmem: 4096
+#ofnode/switch: 2, #ofgpu/node: 8, #ofcpu/node: 64, #ofmem/node: 2048
+----------离开 CLUSTER01.init_infra()
+---------- End of cluster spec ---------------------------------
+---------- 离开parse_cluster_spec01()函数
+---------- 进入LOG01.init_log()          
+ 定义output cluster.csv; job.csv; gpu.csv; network.csv; memory.csv
+output/test_1
+ 
+---------- 离开LOG01.init_log()
+---------- 进入prepare_job_start_events01(self)
+---------- Init, add job start events
+    Print all job events 
+event.time[0], with 1 start_jobs, and 0 end_jobs
+event.time[30], with 1 start_jobs, and 0 end_jobs
+event.time[53], with 1 start_jobs, and 0 end_jobs
+event.time[79], with 1 start_jobs, and 0 end_jobs
+event.time[99], with 1 start_jobs, and 0 end_jobs
+event.time[132], with 1 start_jobs, and 0 end_jobs
+event.time[176], with 1 start_jobs, and 0 end_jobs
+event.time[204], with 1 start_jobs, and 0 end_jobs
+event.time[227], with 1 start_jobs, and 0 end_jobs
+event.time[252], with 1 start_jobs, and 0 end_jobs
+event.time[282], with 1 start_jobs, and 0 end_jobs
+event.time[311], with 1 start_jobs, and 0 end_jobs
+event.time[337], with 1 start_jobs, and 0 end_jobs
+event.time[363], with 1 start_jobs, and 0 end_jobs
+event.time[401], with 1 start_jobs, and 0 end_jobs
+event.time[434], with 1 start_jobs, and 0 end_jobs
+event.time[471], with 1 start_jobs, and 0 end_jobs
+event.time[504], with 1 start_jobs, and 0 end_jobs
+event.time[531], with 1 start_jobs, and 0 end_jobs
+event.time[554], with 1 start_jobs, and 0 end_jobs
+event.time[583], with 1 start_jobs, and 0 end_jobs
+event.time[611], with 1 start_jobs, and 0 end_jobs
+event.time[645], with 1 start_jobs, and 0 end_jobs
+event.time[680], with 1 start_jobs, and 0 end_jobs
+event.time[707], with 1 start_jobs, and 0 end_jobs
+event.time[733], with 1 start_jobs, and 0 end_jobs
+event.time[761], with 1 start_jobs, and 0 end_jobs
+event.time[793], with 1 start_jobs, and 0 end_jobs
+event.time[827], with 1 start_jobs, and 0 end_jobs
+event.time[861], with 1 start_jobs, and 0 end_jobs
+event.time[892], with 1 start_jobs, and 0 end_jobs
+event.time[918], with 1 start_jobs, and 0 end_jobs
+event.time[944], with 1 start_jobs, and 0 end_jobs
+event.time[973], with 1 start_jobs, and 0 end_jobs
+event.time[1008], with 1 start_jobs, and 0 end_jobs
+event.time[1042], with 1 start_jobs, and 0 end_jobs
+event.time[1067], with 1 start_jobs, and 0 end_jobs
+event.time[1100], with 1 start_jobs, and 0 end_jobs
+event.time[1139], with 1 start_jobs, and 0 end_jobs
+event.time[1165], with 1 start_jobs, and 0 end_jobs
+event.time[1194], with 1 start_jobs, and 0 end_jobs
+event.time[1223], with 1 start_jobs, and 0 end_jobs
+event.time[1248], with 1 start_jobs, and 0 end_jobs
+event.time[1274], with 1 start_jobs, and 0 end_jobs
+event.time[1315], with 1 start_jobs, and 0 end_jobs
+event.time[1347], with 1 start_jobs, and 0 end_jobs
+event.time[1381], with 1 start_jobs, and 0 end_jobs
+event.time[1414], with 1 start_jobs, and 0 end_jobs
+event.time[1447], with 1 start_jobs, and 0 end_jobs
+event.time[1471], with 1 start_jobs, and 0 end_jobs
+event.time[1499], with 1 start_jobs, and 0 end_jobs
+event.time[1537], with 1 start_jobs, and 0 end_jobs
+event.time[1580], with 1 start_jobs, and 0 end_jobs
+event.time[1612], with 1 start_jobs, and 0 end_jobs
+event.time[1644], with 1 start_jobs, and 0 end_jobs
+event.time[1676], with 1 start_jobs, and 0 end_jobs
+event.time[1701], with 1 start_jobs, and 0 end_jobs
+event.time[1729], with 1 start_jobs, and 0 end_jobs
+event.time[1750], with 1 start_jobs, and 0 end_jobs
+event.time[1779], with 1 start_jobs, and 0 end_jobs
+ 
+---------- 离开prepare_job_start_events01(self)
+---------- Handle event[time 0]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+----job[0] starts from pending
+---------- Handle event[time 30]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+----job[1] starts from pending
+---------- Handle event[time 53]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 2 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+----job[2] starts from pending
+---------- Handle event[time 79]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+----job[3] starts from pending
+---------- Handle event[time 99]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 4 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+----job[4] starts from pending
+---------- Handle event[time 132]---------- 
+---------- Handle event[time 164]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[0] completed
+exe_time:  164
+jct:  164
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 176]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 177]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 8, 'num_cpu': 48, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[1] completed
+exe_time:  147
+jct:  147
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+----job[5] starts from pending
+----job[6] starts from pending
+---------- Handle event[time 180]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 2, 'num_cpu': 12, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[2] completed
+exe_time:  127
+jct:  127
+---------- Handle event[time 200]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[3] completed
+exe_time:  121
+jct:  121
+---------- Handle event[time 204]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 2 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+----job[7] starts from pending
+---------- Handle event[time 220]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 4, 'num_cpu': 24, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[4] completed
+exe_time:  121
+jct:  121
+---------- Handle event[time 227]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 2 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+----job[8] starts from pending
+---------- Handle event[time 252]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+----job[9] starts from pending
+---------- Handle event[time 282]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+----job[10] starts from pending
+---------- Handle event[time 298]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[6] completed
+exe_time:  121
+jct:  122
+---------- Handle event[time 311]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+----job[11] starts from pending
+---------- Handle event[time 315]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 8, 'num_cpu': 48, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[5] completed
+exe_time:  138
+jct:  183
+---------- Handle event[time 328]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 2, 'num_cpu': 12, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[7] completed
+exe_time:  124
+jct:  124
+---------- Handle event[time 337]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 2 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+----job[12] starts from pending
+---------- Handle event[time 363]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+----job[13] starts from pending
+---------- Handle event[time 378]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[9] completed
+exe_time:  126
+jct:  126
+---------- Handle event[time 382]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 2, 'num_cpu': 12, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[8] completed
+exe_time:  155
+jct:  155
+---------- Handle event[time 401]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+----job[14] starts from pending
+---------- Handle event[time 434]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+----job[15] starts from pending
+---------- Handle event[time 468]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 2, 'num_cpu': 12, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[12] completed
+exe_time:  131
+jct:  131
+---------- Handle event[time 471]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 4 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+----job[16] starts from pending
+---------- Handle event[time 504]---------- 
+---------- Handle event[time 512]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[10] completed
+exe_time:  230
+jct:  230
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 2 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 522]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[14] completed
+exe_time:  121
+jct:  121
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 2 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+----job[17] starts from pending
+---------- Handle event[time 531]---------- 
+---------- Handle event[time 554]---------- 
+---------- Handle event[time 559]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 8, 'num_cpu': 48, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[13] completed
+exe_time:  196
+jct:  196
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+----job[18] starts from pending
+----job[19] starts from pending
+---------- Handle event[time 583]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+----job[20] starts from pending
+---------- Handle event[time 611]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 2 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+----job[21] starts from pending
+---------- Handle event[time 614]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[15] completed
+exe_time:  180
+jct:  180
+---------- Handle event[time 614]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 4, 'num_cpu': 24, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[16] completed
+exe_time:  143
+jct:  143
+---------- Handle event[time 644]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 2, 'num_cpu': 12, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[17] completed
+exe_time:  122
+jct:  140
+---------- Handle event[time 645]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+----job[22] starts from pending
+---------- Handle event[time 679]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[11] completed
+exe_time:  368
+jct:  368
+---------- Handle event[time 680]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 684]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[19] completed
+exe_time:  125
+jct:  130
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 707]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 733]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 737]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 2, 'num_cpu': 12, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[21] completed
+exe_time:  126
+jct:  126
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 748]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[18] completed
+exe_time:  189
+jct:  217
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 761]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 768]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[22] completed
+exe_time:  123
+jct:  123
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 4 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+----job[23] starts from pending
+----job[24] starts from pending
+----job[25] starts from pending
+----job[26] starts from pending
+---------- Handle event[time 793]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 827]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 861]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 889]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 8, 'num_cpu': 48, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[23] completed
+exe_time:  121
+jct:  209
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+----job[27] starts from pending
+----job[28] starts from pending
+---------- Handle event[time 889]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 4, 'num_cpu': 24, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[24] completed
+exe_time:  121
+jct:  182
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+----job[29] starts from pending
+---------- Handle event[time 889]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[25] completed
+exe_time:  121
+jct:  156
+---------- Handle event[time 889]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[26] completed
+exe_time:  121
+jct:  128
+---------- Handle event[time 892]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+----job[30] starts from pending
+---------- Handle event[time 918]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+----job[31] starts from pending
+---------- Handle event[time 944]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 973]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 1008]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 1010]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 8, 'num_cpu': 48, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[27] completed
+exe_time:  121
+jct:  217
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+----job[32] starts from pending
+----job[33] starts from pending
+---------- Handle event[time 1010]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[29] completed
+exe_time:  121
+jct:  149
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 1033]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[30] completed
+exe_time:  141
+jct:  141
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 1039]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[31] completed
+exe_time:  121
+jct:  121
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 1041]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[28] completed
+exe_time:  152
+jct:  214
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 1042]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 1067]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 1100]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 1119]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[20] completed
+exe_time:  536
+jct:  536
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 1131]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[33] completed
+exe_time:  121
+jct:  158
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 4 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+----job[34] starts from pending
+---------- Handle event[time 1135]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 8, 'num_cpu': 48, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[32] completed
+exe_time:  125
+jct:  191
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 4 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 4 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+----job[35] starts from pending
+----job[36] starts from pending
+---------- Handle event[time 1139]---------- 
+---------- Handle event[time 1165]---------- 
+---------- Handle event[time 1194]---------- 
+---------- Handle event[time 1223]---------- 
+---------- Handle event[time 1248]---------- 
+---------- Handle event[time 1256]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 4, 'num_cpu': 24, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[35] completed
+exe_time:  121
+jct:  214
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 2 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+----job[37] starts from pending
+----job[38] starts from pending
+----job[39] starts from pending
+---------- Handle event[time 1258]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 4, 'num_cpu': 24, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[36] completed
+exe_time:  123
+jct:  191
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 2 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+----job[40] starts from pending
+----job[41] starts from pending
+----job[42] starts from pending
+---------- Handle event[time 1274]---------- 
+---------- Handle event[time 1315]---------- 
+---------- Handle event[time 1347]---------- 
+---------- Handle event[time 1377]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[37] completed
+exe_time:  121
+jct:  277
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+----job[43] starts from pending
+---------- Handle event[time 1377]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 2, 'num_cpu': 12, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[38] completed
+exe_time:  121
+jct:  238
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 2 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+----job[44] starts from pending
+---------- Handle event[time 1377]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[39] completed
+exe_time:  121
+jct:  212
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 2 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+----job[45] starts from pending
+---------- Handle event[time 1380]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[40] completed
+exe_time:  122
+jct:  186
+---------- Handle event[time 1381]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+----job[46] starts from pending
+---------- Handle event[time 1381]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 2, 'num_cpu': 12, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[41] completed
+exe_time:  123
+jct:  158
+---------- Handle event[time 1414]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 1436]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 8, 'num_cpu': 48, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[34] completed
+exe_time:  305
+jct:  428
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+----job[47] starts from pending
+---------- Handle event[time 1447]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 1471]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 1498]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 2, 'num_cpu': 12, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[45] completed
+exe_time:  121
+jct:  151
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 1499]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 1502]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[46] completed
+exe_time:  121
+jct:  121
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 1521]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[42] completed
+exe_time:  263
+jct:  273
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 1535]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[44] completed
+exe_time:  158
+jct:  220
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 1537]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 1557]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 8, 'num_cpu': 48, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[47] completed
+exe_time:  121
+jct:  143
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 4 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+----job[48] starts from pending
+----job[49] starts from pending
+----job[50] starts from pending
+----job[51] starts from pending
+---------- Handle event[time 1580]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 4 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 1586]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[43] completed
+exe_time:  209
+jct:  312
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 4 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 1612]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 4 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 1644]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 4 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 1676]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 4 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 1683]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 8, 'num_cpu': 48, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[48] completed
+exe_time:  126
+jct:  236
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 4 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 4 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+----job[52] starts from pending
+----job[53] starts from pending
+----job[54] starts from pending
+---------- Handle event[time 1683]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 4, 'num_cpu': 24, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[50] completed
+exe_time:  126
+jct:  184
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 1687]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[51] completed
+exe_time:  130
+jct:  150
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 1701]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 1729]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 1750]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 1779]---------- 
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 1804]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 4, 'num_cpu': 24, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[52] completed
+exe_time:  121
+jct:  224
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 1804]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[53] completed
+exe_time:  121
+jct:  192
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- Handle event[time 1854]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 4, 'num_cpu': 24, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[54] completed
+exe_time:  171
+jct:  210
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 2 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 4 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 4 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+----job[55] starts from pending
+----job[56] starts from pending
+----job[57] starts from pending
+---------- Handle event[time 1982]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 4, 'num_cpu': 24, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[57] completed
+exe_time:  128
+jct:  253
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 4 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- 离开try_get_job_res(job)
+----job[58] starts from pending
+----job[59] starts from pending
+---------- Handle event[time 1987]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 2, 'num_cpu': 12, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[56] completed
+exe_time:  133
+jct:  286
+---------- Handle event[time 1989]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 8, 'num_cpu': 48, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[55] completed
+exe_time:  135
+jct:  313
+---------- Handle event[time 2104]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 4, 'num_cpu': 24, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[58] completed
+exe_time:  122
+jct:  354
+---------- Handle event[time 2104]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[59] completed
+exe_time:  122
+jct:  325
+---------- Handle event[time 3357]---------- 
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[49] completed
+exe_time:  1800
+jct:  1886
+average jct of scheduler fifo is 227
+makespan of scheduler fifo is 3357

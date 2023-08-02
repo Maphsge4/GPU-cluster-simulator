@@ -1,0 +1,32 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: draw",
+            "type": "python",
+            "request": "launch",
+            "program": "utils/drawGPU.py",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "Python: run_sim.py",
+            "type": "python",
+            "request": "launch",
+            "program": "run_sim.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--cluster_spec=input/input01/n2g8.csv",
+                "--print",
+                "--trace_file=input/input01/60_job.csv",
+                "--schedule=fifo",
+                "--scheme=yarn",
+                "--log_path=output/test_1"
+            ],
+            "justMyCode": true
+        }
+    ]
+}

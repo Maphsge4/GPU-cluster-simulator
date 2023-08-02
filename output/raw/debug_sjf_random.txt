@@ -1,0 +1,3567 @@
+---------- 进入parse_job_file01(trace_file)函数-----------------
+---------- Read TF jobs from 从以下输入文档阅读: input/input01/60_job.csv-------------------------
+---------- we get the following fields 读取60_job.csv的抬头/keys:
+----------['job_id', 'num_gpu', 'submit_time', 'iterations', 'model_name', 'duration', 'interval']----------
+No model match, pick inception3
+没有匹配到的model_name是 googlenet
+No model match, pick inception3
+没有匹配到的model_name是 googlenet
+No model match, pick inception3
+没有匹配到的model_name是 googlenet
+No model match, pick inception3
+没有匹配到的model_name是 googlenet
+No model match, pick inception3
+没有匹配到的model_name是 googlenet
+No model match, pick inception3
+没有匹配到的model_name是 googlenet
+----------进入sort_all_jobs(self, mode=None)
+   Jobs are sorted with their start time
+----------离开sort_all_jobs(self, mode=None)
+---------- Get 60 TF jobs in total； 把所有jobs都从60_job.csv里面读出来了 ----------------------------------
+---------- 离开parse_job_file01(trace_file)函数-----------------
+---------- 进入parse_cluster_spec01()函数
+---------- FLAGS01.cluster_spec为 input/input01/n2g8.csv
+['num_switch', 'num_node_p_switch', 'num_gpu_p_node', 'num_cpu_p_node', 'mem_p_node']
+num_switch: 1
+num_node_p_switch: 2
+num_gpu_p_node: 8
+num_cpu_p_node: 64
+mem_p_node: 2048
+---------- 进入 CLUSTER01.init_infra() 
+---------- Init and create cluster infration entities (switches, nodes) 
+---------- by using class _Switch, _Node
+  Switch[0] has 2 nodes
+ Node[0] has 8 gpus, 64 cpus, 2048 G memory
+ Node[1] has 8 gpus, 64 cpus, 2048 G memory
+Cluster is ready to use
+Cluster Spec
+#ofswitch: 1, #ofnode: 2, #ofgpu: 16, #ofcpu: 128, #ofmem: 4096
+#ofnode/switch: 2, #ofgpu/node: 8, #ofcpu/node: 64, #ofmem/node: 2048
+----------离开 CLUSTER01.init_infra()
+---------- End of cluster spec ---------------------------------
+---------- 离开parse_cluster_spec01()函数
+---------- 进入LOG01.init_log()          
+ 定义output cluster.csv; job.csv; gpu.csv; network.csv; memory.csv
+output/test_1
+ 
+---------- 离开LOG01.init_log()
+---------- 进入prepare_job_start_events01(self)
+---------- Init, add job start events
+    Print all job events 
+event.time[0], with 1 start_jobs, and 0 end_jobs
+event.time[30], with 1 start_jobs, and 0 end_jobs
+event.time[53], with 1 start_jobs, and 0 end_jobs
+event.time[79], with 1 start_jobs, and 0 end_jobs
+event.time[99], with 1 start_jobs, and 0 end_jobs
+event.time[132], with 1 start_jobs, and 0 end_jobs
+event.time[176], with 1 start_jobs, and 0 end_jobs
+event.time[204], with 1 start_jobs, and 0 end_jobs
+event.time[227], with 1 start_jobs, and 0 end_jobs
+event.time[252], with 1 start_jobs, and 0 end_jobs
+event.time[282], with 1 start_jobs, and 0 end_jobs
+event.time[311], with 1 start_jobs, and 0 end_jobs
+event.time[337], with 1 start_jobs, and 0 end_jobs
+event.time[363], with 1 start_jobs, and 0 end_jobs
+event.time[401], with 1 start_jobs, and 0 end_jobs
+event.time[434], with 1 start_jobs, and 0 end_jobs
+event.time[471], with 1 start_jobs, and 0 end_jobs
+event.time[504], with 1 start_jobs, and 0 end_jobs
+event.time[531], with 1 start_jobs, and 0 end_jobs
+event.time[554], with 1 start_jobs, and 0 end_jobs
+event.time[583], with 1 start_jobs, and 0 end_jobs
+event.time[611], with 1 start_jobs, and 0 end_jobs
+event.time[645], with 1 start_jobs, and 0 end_jobs
+event.time[680], with 1 start_jobs, and 0 end_jobs
+event.time[707], with 1 start_jobs, and 0 end_jobs
+event.time[733], with 1 start_jobs, and 0 end_jobs
+event.time[761], with 1 start_jobs, and 0 end_jobs
+event.time[793], with 1 start_jobs, and 0 end_jobs
+event.time[827], with 1 start_jobs, and 0 end_jobs
+event.time[861], with 1 start_jobs, and 0 end_jobs
+event.time[892], with 1 start_jobs, and 0 end_jobs
+event.time[918], with 1 start_jobs, and 0 end_jobs
+event.time[944], with 1 start_jobs, and 0 end_jobs
+event.time[973], with 1 start_jobs, and 0 end_jobs
+event.time[1008], with 1 start_jobs, and 0 end_jobs
+event.time[1042], with 1 start_jobs, and 0 end_jobs
+event.time[1067], with 1 start_jobs, and 0 end_jobs
+event.time[1100], with 1 start_jobs, and 0 end_jobs
+event.time[1139], with 1 start_jobs, and 0 end_jobs
+event.time[1165], with 1 start_jobs, and 0 end_jobs
+event.time[1194], with 1 start_jobs, and 0 end_jobs
+event.time[1223], with 1 start_jobs, and 0 end_jobs
+event.time[1248], with 1 start_jobs, and 0 end_jobs
+event.time[1274], with 1 start_jobs, and 0 end_jobs
+event.time[1315], with 1 start_jobs, and 0 end_jobs
+event.time[1347], with 1 start_jobs, and 0 end_jobs
+event.time[1381], with 1 start_jobs, and 0 end_jobs
+event.time[1414], with 1 start_jobs, and 0 end_jobs
+event.time[1447], with 1 start_jobs, and 0 end_jobs
+event.time[1471], with 1 start_jobs, and 0 end_jobs
+event.time[1499], with 1 start_jobs, and 0 end_jobs
+event.time[1537], with 1 start_jobs, and 0 end_jobs
+event.time[1580], with 1 start_jobs, and 0 end_jobs
+event.time[1612], with 1 start_jobs, and 0 end_jobs
+event.time[1644], with 1 start_jobs, and 0 end_jobs
+event.time[1676], with 1 start_jobs, and 0 end_jobs
+event.time[1701], with 1 start_jobs, and 0 end_jobs
+event.time[1729], with 1 start_jobs, and 0 end_jobs
+event.time[1750], with 1 start_jobs, and 0 end_jobs
+event.time[1779], with 1 start_jobs, and 0 end_jobs
+ 
+---------- 离开prepare_job_start_events01(self)
+---- job[0] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[1] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[2] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[3] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[4] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[5] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 0, 'tasks': []}
+**** job[0] completed
+exe_time:  174
+jct:  174
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[6] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 25.7, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 480.8, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 480.8, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 480.8, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 25.7, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 480.8, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 25.7, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 480.8, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 50.1, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 11.5, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 22.5, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 45.0, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 45.0, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 27.0, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 1960.0, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 320.0, 'tasks': []}
+**** job[1] completed
+exe_time:  157
+jct:  157
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 65.3, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 65.3, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 0.0, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 130.6, 'tasks': []}
+**** job[2] completed
+exe_time:  137
+jct:  137
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[7] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 0, 'tasks': []}
+**** job[3] completed
+exe_time:  131
+jct:  131
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[8] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 104.4, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 422.4, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 104.4, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 104.4, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 19.1, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 403.3, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 225.9, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 87.3, 'tasks': []}
+**** job[4] completed
+exe_time:  131
+jct:  131
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[9] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[10] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 0, 'tasks': []}
+**** job[6] completed
+exe_time:  131
+jct:  131
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[11] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[12] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 0.0, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 149.6, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 66.4, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 83.2, 'tasks': []}
+**** job[7] completed
+exe_time:  134
+jct:  134
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 31.4, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 31.4, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 31.4, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 25.2, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 31.4, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 25.2, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 25.2, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 25.2, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 62.4, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 22.0, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 18.8, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 22.4, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 50.8, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 13.6, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 13.6, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 22.8, 'tasks': []}
+**** job[5] completed
+exe_time:  172
+jct:  227
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[13] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 0, 'tasks': []}
+**** job[9] completed
+exe_time:  136
+jct:  136
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 94.4, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 432.4, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 94.4, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 432.4, 'tasks': []}
+**** job[8] completed
+exe_time:  165
+jct:  165
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[14] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[15] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[16] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 547.1, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 547.1, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 885.0, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 209.2, 'tasks': []}
+**** job[12] completed
+exe_time:  141
+jct:  141
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[17] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 0, 'tasks': []}
+**** job[10] completed
+exe_time:  240
+jct:  240
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[18] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 0, 'tasks': []}
+**** job[14] completed
+exe_time:  131
+jct:  131
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[19] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[20] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[21] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 0, 'tasks': []}
+**** job[15] completed
+exe_time:  190
+jct:  190
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 232.4, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 3.4, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 232.4, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 232.4, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 435.6, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 199.5, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 62.1, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 3.4, 'tasks': []}
+**** job[16] completed
+exe_time:  153
+jct:  153
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 422.2, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 84.3, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 422.2, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 84.3, 'tasks': []}
+**** job[17] completed
+exe_time:  132
+jct:  132
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[22] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[23] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 0, 'tasks': []}
+**** job[11] completed
+exe_time:  378
+jct:  378
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 0, 'tasks': []}
+**** job[19] completed
+exe_time:  135
+jct:  135
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[24] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 0, 'tasks': []}
+**** job[18] completed
+exe_time:  199
+jct:  199
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[25] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 235.8, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 0.0, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 165.9, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 69.9, 'tasks': []}
+**** job[21] completed
+exe_time:  136
+jct:  136
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[26] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 0, 'tasks': []}
+**** job[22] completed
+exe_time:  133
+jct:  133
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[27] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 46.0, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 34.6, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 34.6, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 46.0, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 34.6, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 46.0, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 46.0, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 46.0, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 40.0, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 95.5, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 18.9, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 31.5, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 33.9, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 31.5, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 31.5, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 51.0, 'tasks': []}
+**** job[13] completed
+exe_time:  450
+jct:  450
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[28] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 48.5, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 8.1, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 8.1, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 8.1, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 28.3, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 8.9, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 24.3, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 11.3, 'tasks': []}
+**** job[24] completed
+exe_time:  131
+jct:  131
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[29] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 0, 'tasks': []}
+**** job[25] completed
+exe_time:  131
+jct:  131
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 0, 'tasks': []}
+**** job[26] completed
+exe_time:  131
+jct:  131
+---- job[30] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[31] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 56.9, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 56.9, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 92.7, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 56.9, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 56.9, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 56.9, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 56.9, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 92.7, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 91.2, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 31.0, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 41.0, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 93.0, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 31.0, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 157.2, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 30.4, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 52.0, 'tasks': []}
+**** job[23] completed
+exe_time:  131
+jct:  264
+---- job[32] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[33] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 0, 'tasks': []}
+**** job[28] completed
+exe_time:  162
+jct:  162
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 0, 'tasks': []}
+**** job[29] completed
+exe_time:  131
+jct:  131
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[34] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[35] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 0, 'tasks': []}
+**** job[30] completed
+exe_time:  151
+jct:  151
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 0, 'tasks': []}
+**** job[31] completed
+exe_time:  131
+jct:  131
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[36] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[37] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 0, 'tasks': []}
+**** job[33] completed
+exe_time:  131
+jct:  131
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 0, 'tasks': []}
+**** job[20] completed
+exe_time:  546
+jct:  546
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[38] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[39] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 98.7, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 98.7, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 407.8, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 407.8, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 51.4, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 22.6, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 793.0, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 146.0, 'tasks': []}
+**** job[35] completed
+exe_time:  131
+jct:  131
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 406.6, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 406.6, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 140.5, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 406.6, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 140.5, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 140.5, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 140.5, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 140.5, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 30.3, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 56.5, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 56.5, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 56.5, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 1189.5, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 365.0, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 123.0, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 45.0, 'tasks': []}
+**** job[27] completed
+exe_time:  237
+jct:  388
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[40] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 77.4, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 72.2, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 72.2, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 77.4, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 61.4, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 83.4, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 71.4, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 83.0, 'tasks': []}
+**** job[36] completed
+exe_time:  133
+jct:  133
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[41] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 0, 'tasks': []}
+**** job[37] completed
+exe_time:  131
+jct:  131
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[42] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 20.2, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 36.4, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 36.4, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 20.2, 'tasks': []}
+**** job[38] completed
+exe_time:  131
+jct:  131
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[43] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 0, 'tasks': []}
+**** job[39] completed
+exe_time:  131
+jct:  131
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[44] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 0, 'tasks': []}
+**** job[40] completed
+exe_time:  132
+jct:  132
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 74.3, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 74.3, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 45.4, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 74.3, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 74.3, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 45.4, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 45.4, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 45.4, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 94.4, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 51.6, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 94.8, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 43.6, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 43.6, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 63.6, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 43.6, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 43.6, 'tasks': []}
+**** job[32] completed
+exe_time:  161
+jct:  398
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[45] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 48.7, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 31.9, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 31.9, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 48.7, 'tasks': []}
+**** job[41] completed
+exe_time:  133
+jct:  133
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[46] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[47] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[48] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[49] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 50.6, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 50.6, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 0.0, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 101.2, 'tasks': []}
+**** job[45] completed
+exe_time:  131
+jct:  131
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 0, 'tasks': []}
+**** job[44] completed
+exe_time:  168
+jct:  168
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 0, 'tasks': []}
+**** job[43] completed
+exe_time:  219
+jct:  219
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[50] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 0, 'tasks': []}
+**** job[46] completed
+exe_time:  131
+jct:  131
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 0, 'tasks': []}
+**** job[42] completed
+exe_time:  273
+jct:  273
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[51] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[52] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[53] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 21.8, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 21.8, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 97.9, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 21.8, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 34.5, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 28.8, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 34.6, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 65.4, 'tasks': []}
+**** job[50] completed
+exe_time:  136
+jct:  136
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[54] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[55] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 0, 'tasks': []}
+**** job[51] completed
+exe_time:  140
+jct:  140
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[56] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 526.8, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 20.3, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 526.8, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 526.8, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 1219.8, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 252.9, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 107.7, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 20.3, 'tasks': []}
+**** job[52] completed
+exe_time:  131
+jct:  131
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[57] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 0, 'tasks': []}
+**** job[53] completed
+exe_time:  131
+jct:  131
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[58] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---- job[59] is added
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 48.5, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 8.1, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 48.5, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 8.1, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 56.6, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 17.8, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 16.2, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 22.6, 'tasks': []}
+**** job[54] completed
+exe_time:  181
+jct:  181
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 56.6, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 56.6, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 72.8, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 40.4, 'tasks': []}
+**** job[56] completed
+exe_time:  143
+jct:  143
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 57.3, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 23.3, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 57.3, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 23.3, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 38.6, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 50.8, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 25.2, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 46.6, 'tasks': []}
+**** job[57] completed
+exe_time:  138
+jct:  138
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 102.5, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 30.3, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 30.3, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 30.3, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 37.8, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 35.0, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 29.7, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 90.9, 'tasks': []}
+**** job[58] completed
+exe_time:  132
+jct:  132
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 0, 'tasks': []}
+**** job[59] completed
+exe_time:  132
+jct:  132
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 26.3, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 26.3, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 30.3, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 26.3, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 30.3, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 26.3, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 30.3, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 30.3, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 62.4, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 22.0, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 18.8, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 22.4, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 50.8, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 13.6, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 13.6, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 22.8, 'tasks': []}
+**** job[34] completed
+exe_time:  635
+jct:  969
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 209.2, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 209.2, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 209.2, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 209.2, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 209.2, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 26.6, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 209.2, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 209.2, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 8.4, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 2.5, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 5.1, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 3.4, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 1008.0, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 448.0, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 15.6, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 0, 'tasks': []}
+**** job[47] completed
+exe_time:  121
+jct:  684
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 30.0, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 30.0, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 102.8, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 102.8, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 30.0, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 30.0, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 102.8, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 102.8, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 87.6, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 83.6, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 59.6, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 63.2, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 63.6, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 56.4, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 59.2, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 58.0, 'tasks': []}
+**** job[48] completed
+exe_time:  126
+jct:  777
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 38.1, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 38.1, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 38.1, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 488.7, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 38.1, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 38.1, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 488.7, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'network': 488.7, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 30.3, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 1182.9, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 198.9, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 100.5, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 27.0, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 45.0, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 0, 'num_cpu': 4, 'network': 27.0, 'tasks': []}
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 0, 'num_gpu': 0, 'num_cpu': 4, 'network': 45.0, 'tasks': []}
+**** job[55] completed
+exe_time:  135
+jct:  683
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= random
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+-------进入switch.release_job_res()--------
+----进入node.release_job_res()--------
+node01.node_dict:    {'id': 1, 'num_gpu': 1, 'num_cpu': 2, 'network': 0, 'tasks': []}
+**** job[49] completed
+exe_time:  1810
+jct:  1810
+average jct of scheduler sjf is 244
+makespan of scheduler sjf is 3281

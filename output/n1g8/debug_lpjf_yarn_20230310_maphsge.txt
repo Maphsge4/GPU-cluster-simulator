@@ -1,0 +1,1757 @@
+---------- 进入parse_job_file01(trace_file)函数-----------------
+---------- Read TF jobs from 从以下输入文档阅读: input/input01/60_job.csv-------------------------
+---------- we get the following fields 读取60_job.csv的抬头/keys:
+----------['job_id', 'num_gpu', 'submit_time', 'iterations', 'model_name', 'duration', 'interval']----------
+No model match, pick inception3
+没有匹配到的model_name是 googlenet
+No model match, pick inception3
+没有匹配到的model_name是 googlenet
+No model match, pick inception3
+没有匹配到的model_name是 googlenet
+No model match, pick inception3
+没有匹配到的model_name是 googlenet
+No model match, pick inception3
+没有匹配到的model_name是 googlenet
+No model match, pick inception3
+没有匹配到的model_name是 googlenet
+----------进入sort_all_jobs(self, mode=None)
+   Jobs are sorted with their start time
+----------离开sort_all_jobs(self, mode=None)
+---------- Get 60 TF jobs in total； 把所有jobs都从60_job.csv里面读出来了 ----------------------------------
+---------- 离开parse_job_file01(trace_file)函数-----------------
+---------- 进入parse_cluster_spec01()函数
+---------- FLAGS01.cluster_spec为 input/input01/n1g1.csv
+['num_switch', 'num_node_p_switch', 'num_gpu_p_node', 'num_cpu_p_node', 'mem_p_node']
+num_switch: 1
+num_node_p_switch: 1
+num_gpu_p_node: 8
+num_cpu_p_node: 64
+mem_p_node: 1024
+---------- 进入 CLUSTER01.init_infra() 
+---------- Init and create cluster infration entities (switches, nodes) 
+---------- by using class _Switch, _Node
+  Switch[0] has 1 nodes
+ Node[0] has 8 gpus, 64 cpus, 1024 G memory
+Cluster is ready to use
+Cluster Spec
+#ofswitch: 1, #ofnode: 1, #ofgpu: 8, #ofcpu: 64, #ofmem: 1024
+#ofnode/switch: 1, #ofgpu/node: 8, #ofcpu/node: 64, #ofmem/node: 1024
+----------离开 CLUSTER01.init_infra()
+---------- End of cluster spec ---------------------------------
+---------- 离开parse_cluster_spec01()函数
+---------- 进入LOG01.init_log()          
+ 定义output cluster.csv; job.csv; gpu.csv; network.csv; memory.csv
+output/test_1
+ 
+---------- 离开LOG01.init_log()
+---------- 进入prepare_job_start_events01(self)
+---------- Init, add job start events
+    Print all job events 
+event.time[0], with 1 start_jobs, and 0 end_jobs
+event.time[30], with 1 start_jobs, and 0 end_jobs
+event.time[53], with 1 start_jobs, and 0 end_jobs
+event.time[79], with 1 start_jobs, and 0 end_jobs
+event.time[99], with 1 start_jobs, and 0 end_jobs
+event.time[132], with 1 start_jobs, and 0 end_jobs
+event.time[176], with 1 start_jobs, and 0 end_jobs
+event.time[204], with 1 start_jobs, and 0 end_jobs
+event.time[227], with 1 start_jobs, and 0 end_jobs
+event.time[252], with 1 start_jobs, and 0 end_jobs
+event.time[282], with 1 start_jobs, and 0 end_jobs
+event.time[311], with 1 start_jobs, and 0 end_jobs
+event.time[337], with 1 start_jobs, and 0 end_jobs
+event.time[363], with 1 start_jobs, and 0 end_jobs
+event.time[401], with 1 start_jobs, and 0 end_jobs
+event.time[434], with 1 start_jobs, and 0 end_jobs
+event.time[471], with 1 start_jobs, and 0 end_jobs
+event.time[504], with 1 start_jobs, and 0 end_jobs
+event.time[531], with 1 start_jobs, and 0 end_jobs
+event.time[554], with 1 start_jobs, and 0 end_jobs
+event.time[583], with 1 start_jobs, and 0 end_jobs
+event.time[611], with 1 start_jobs, and 0 end_jobs
+event.time[645], with 1 start_jobs, and 0 end_jobs
+event.time[680], with 1 start_jobs, and 0 end_jobs
+event.time[707], with 1 start_jobs, and 0 end_jobs
+event.time[733], with 1 start_jobs, and 0 end_jobs
+event.time[761], with 1 start_jobs, and 0 end_jobs
+event.time[793], with 1 start_jobs, and 0 end_jobs
+event.time[827], with 1 start_jobs, and 0 end_jobs
+event.time[861], with 1 start_jobs, and 0 end_jobs
+event.time[892], with 1 start_jobs, and 0 end_jobs
+event.time[918], with 1 start_jobs, and 0 end_jobs
+event.time[944], with 1 start_jobs, and 0 end_jobs
+event.time[973], with 1 start_jobs, and 0 end_jobs
+event.time[1008], with 1 start_jobs, and 0 end_jobs
+event.time[1042], with 1 start_jobs, and 0 end_jobs
+event.time[1067], with 1 start_jobs, and 0 end_jobs
+event.time[1100], with 1 start_jobs, and 0 end_jobs
+event.time[1139], with 1 start_jobs, and 0 end_jobs
+event.time[1165], with 1 start_jobs, and 0 end_jobs
+event.time[1194], with 1 start_jobs, and 0 end_jobs
+event.time[1223], with 1 start_jobs, and 0 end_jobs
+event.time[1248], with 1 start_jobs, and 0 end_jobs
+event.time[1274], with 1 start_jobs, and 0 end_jobs
+event.time[1315], with 1 start_jobs, and 0 end_jobs
+event.time[1347], with 1 start_jobs, and 0 end_jobs
+event.time[1381], with 1 start_jobs, and 0 end_jobs
+event.time[1414], with 1 start_jobs, and 0 end_jobs
+event.time[1447], with 1 start_jobs, and 0 end_jobs
+event.time[1471], with 1 start_jobs, and 0 end_jobs
+event.time[1499], with 1 start_jobs, and 0 end_jobs
+event.time[1537], with 1 start_jobs, and 0 end_jobs
+event.time[1580], with 1 start_jobs, and 0 end_jobs
+event.time[1612], with 1 start_jobs, and 0 end_jobs
+event.time[1644], with 1 start_jobs, and 0 end_jobs
+event.time[1676], with 1 start_jobs, and 0 end_jobs
+event.time[1701], with 1 start_jobs, and 0 end_jobs
+event.time[1729], with 1 start_jobs, and 0 end_jobs
+event.time[1750], with 1 start_jobs, and 0 end_jobs
+event.time[1779], with 1 start_jobs, and 0 end_jobs
+ 
+---------- 离开prepare_job_start_events01(self)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[0] starts from pending
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[0] completed
+exe_time:  164
+jct:  164
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[1] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 2 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 2 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 2 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 2 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 2 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 2 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 8, 'num_cpu': 48, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[1] completed
+exe_time:  147
+jct:  281
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 2 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[2] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 4 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[4] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[6] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 2 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[3] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 2 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 4, 'num_cpu': 24, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[4] completed
+exe_time:  121
+jct:  333
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[6] completed
+exe_time:  121
+jct:  256
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 2, 'num_cpu': 12, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[2] completed
+exe_time:  127
+jct:  385
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[3] completed
+exe_time:  121
+jct:  379
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[5] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 2 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 2 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 2 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 2 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 2 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 2 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 8, 'num_cpu': 48, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[5] completed
+exe_time:  138
+jct:  464
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 2 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[7] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[9] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[11] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 2 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[8] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 2 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[12] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 2, 'num_cpu': 12, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[7] completed
+exe_time:  124
+jct:  516
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[10] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[14] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 4 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[9] completed
+exe_time:  126
+jct:  470
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 2, 'num_cpu': 12, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[12] completed
+exe_time:  131
+jct:  405
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 2, 'num_cpu': 12, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[8] completed
+exe_time:  155
+jct:  539
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[14] completed
+exe_time:  121
+jct:  440
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[10] completed
+exe_time:  230
+jct:  668
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[11] completed
+exe_time:  368
+jct:  653
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[13] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 4 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 8, 'num_cpu': 48, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[13] completed
+exe_time:  196
+jct:  797
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[15] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 2 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[17] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[19] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 2 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[21] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 4 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 4 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 4 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 4 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 4 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 2, 'num_cpu': 12, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[17] completed
+exe_time:  122
+jct:  778
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 4 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[16] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[19] completed
+exe_time:  125
+jct:  731
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[18] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 2, 'num_cpu': 12, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[21] completed
+exe_time:  126
+jct:  675
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[20] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[22] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 4 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[15] completed
+exe_time:  180
+jct:  906
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 4, 'num_cpu': 24, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[16] completed
+exe_time:  143
+jct:  954
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[22] completed
+exe_time:  123
+jct:  793
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[18] completed
+exe_time:  189
+jct:  943
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[20] completed
+exe_time:  536
+jct:  1239
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[23] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 8, 'num_cpu': 48, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[23] completed
+exe_time:  121
+jct:  1263
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 4 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[24] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[26] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[28] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[30] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 4, 'num_cpu': 24, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[24] completed
+exe_time:  121
+jct:  1357
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[25] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[29] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[26] completed
+exe_time:  121
+jct:  1303
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[30] completed
+exe_time:  141
+jct:  1192
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[28] completed
+exe_time:  152
+jct:  1268
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[25] completed
+exe_time:  121
+jct:  1452
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[29] completed
+exe_time:  121
+jct:  1324
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[27] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 8, 'num_cpu': 48, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[27] completed
+exe_time:  121
+jct:  1513
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[31] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[33] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 4 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[35] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[37] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[39] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 2 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[31] completed
+exe_time:  121
+jct:  1509
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[33] completed
+exe_time:  121
+jct:  1454
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 4, 'num_cpu': 24, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[35] completed
+exe_time:  121
+jct:  1385
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[37] completed
+exe_time:  121
+jct:  1327
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[39] completed
+exe_time:  121
+jct:  1262
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[32] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 4 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 8, 'num_cpu': 48, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[32] completed
+exe_time:  125
+jct:  1608
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[34] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 2 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 8, 'num_cpu': 48, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[34] completed
+exe_time:  305
+jct:  1849
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 4 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[36] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[40] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[42] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[44] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[46] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[46] completed
+exe_time:  121
+jct:  1597
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 2 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[40] completed
+exe_time:  122
+jct:  1785
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 2 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[38] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 4, 'num_cpu': 24, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[36] completed
+exe_time:  123
+jct:  1913
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 2 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[41] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 2 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[45] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[44] completed
+exe_time:  158
+jct:  1700
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[43] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 2, 'num_cpu': 12, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[38] completed
+exe_time:  121
+jct:  1961
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 2, 'num_cpu': 12, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[45] completed
+exe_time:  121
+jct:  1754
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 2, 'num_cpu': 12, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[41] completed
+exe_time:  123
+jct:  1880
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[42] completed
+exe_time:  263
+jct:  1872
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[43] completed
+exe_time:  209
+jct:  1950
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[47] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 8, 'num_cpu': 48, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[47] completed
+exe_time:  121
+jct:  1931
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[48] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 4 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 8, 'num_cpu': 48, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[48] completed
+exe_time:  126
+jct:  2024
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[49] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[51] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[53] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[53] completed
+exe_time:  121
+jct:  1980
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 4 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[50] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 4 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[51] completed
+exe_time:  130
+jct:  2064
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 4 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 4, 'num_cpu': 24, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[50] completed
+exe_time:  126
+jct:  2219
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 4 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[52] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 4, 'num_cpu': 24, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[52] completed
+exe_time:  121
+jct:  2259
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 4 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[54] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 2 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[56] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 4 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 2, 'num_cpu': 12, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[56] completed
+exe_time:  133
+jct:  2271
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 4, 'num_cpu': 24, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[54] completed
+exe_time:  171
+jct:  2366
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[49] completed
+exe_time:  1800
+jct:  3800
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 8 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[55] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 4 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 8, 'num_cpu': 48, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[55] completed
+exe_time:  135
+jct:  3730
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 4 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[57] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 1 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[59] starts from pending
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 1, 'num_cpu': 2, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[59] completed
+exe_time:  122
+jct:  3749
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= yarn
+进入ms_yarn_alloc_res函数
+need_gpu= 4 self.num_gpu_p_node= 8
+---------- maphsge进入try_single_node_alloc(self, job)
+---------- maphsge7离开try_single_node_alloc(self, job)
+---------- 离开try_get_job_res(job)
+----job[58] starts from pending
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 4, 'num_cpu': 24, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[57] completed
+exe_time:  128
+jct:  3805
+进入log01的checkpoint函数
+{'id': 0, 'num_gpu': 4, 'num_cpu': 24, 'mem': 5, 'tasks': [], 'network': 0}
+**** job[58] completed
+exe_time:  122
+jct:  3900
+进入log01的checkpoint函数
+average jct of scheduler lpjf is 1455

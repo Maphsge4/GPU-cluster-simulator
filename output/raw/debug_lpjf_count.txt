@@ -1,0 +1,723 @@
+---------- 进入parse_job_file01(trace_file)函数-----------------
+---------- Read TF jobs from 从以下输入文档阅读: input/input01/60_job.csv-------------------------
+---------- we get the following fields 读取60_job.csv的抬头/keys:
+----------['job_id', 'num_gpu', 'submit_time', 'iterations', 'model_name', 'duration', 'interval']----------
+No model match, pick inception3
+没有匹配到的model_name是 googlenet
+No model match, pick inception3
+没有匹配到的model_name是 googlenet
+No model match, pick inception3
+没有匹配到的model_name是 googlenet
+No model match, pick inception3
+没有匹配到的model_name是 googlenet
+No model match, pick inception3
+没有匹配到的model_name是 googlenet
+No model match, pick inception3
+没有匹配到的model_name是 googlenet
+----------进入sort_all_jobs(self, mode=None)
+   Jobs are sorted with their start time
+----------离开sort_all_jobs(self, mode=None)
+---------- Get 60 TF jobs in total； 把所有jobs都从60_job.csv里面读出来了 ----------------------------------
+---------- 离开parse_job_file01(trace_file)函数-----------------
+---------- 进入parse_cluster_spec01()函数
+---------- FLAGS01.cluster_spec为 input/input01/n2g8.csv
+['num_switch', 'num_node_p_switch', 'num_gpu_p_node', 'num_cpu_p_node', 'mem_p_node']
+num_switch: 1
+num_node_p_switch: 2
+num_gpu_p_node: 8
+num_cpu_p_node: 64
+mem_p_node: 2048
+---------- 进入 CLUSTER01.init_infra() 
+---------- Init and create cluster infration entities (switches, nodes) 
+---------- by using class _Switch, _Node
+  Switch[0] has 2 nodes
+ Node[0] has 8 gpus, 64 cpus, 2048 G memory
+ Node[1] has 8 gpus, 64 cpus, 2048 G memory
+Cluster is ready to use
+Cluster Spec
+#ofswitch: 1, #ofnode: 2, #ofgpu: 16, #ofcpu: 128, #ofmem: 4096
+#ofnode/switch: 2, #ofgpu/node: 8, #ofcpu/node: 64, #ofmem/node: 2048
+----------离开 CLUSTER01.init_infra()
+---------- End of cluster spec ---------------------------------
+---------- 离开parse_cluster_spec01()函数
+---------- 进入LOG01.init_log()          
+ 定义output cluster.csv; job.csv; gpu.csv; network.csv; memory.csv
+output/test_1
+ 
+---------- 离开LOG01.init_log()
+---------- 进入prepare_job_start_events01(self)
+---------- Init, add job start events
+    Print all job events 
+event.time[0], with 1 start_jobs, and 0 end_jobs
+event.time[30], with 1 start_jobs, and 0 end_jobs
+event.time[53], with 1 start_jobs, and 0 end_jobs
+event.time[79], with 1 start_jobs, and 0 end_jobs
+event.time[99], with 1 start_jobs, and 0 end_jobs
+event.time[132], with 1 start_jobs, and 0 end_jobs
+event.time[176], with 1 start_jobs, and 0 end_jobs
+event.time[204], with 1 start_jobs, and 0 end_jobs
+event.time[227], with 1 start_jobs, and 0 end_jobs
+event.time[252], with 1 start_jobs, and 0 end_jobs
+event.time[282], with 1 start_jobs, and 0 end_jobs
+event.time[311], with 1 start_jobs, and 0 end_jobs
+event.time[337], with 1 start_jobs, and 0 end_jobs
+event.time[363], with 1 start_jobs, and 0 end_jobs
+event.time[401], with 1 start_jobs, and 0 end_jobs
+event.time[434], with 1 start_jobs, and 0 end_jobs
+event.time[471], with 1 start_jobs, and 0 end_jobs
+event.time[504], with 1 start_jobs, and 0 end_jobs
+event.time[531], with 1 start_jobs, and 0 end_jobs
+event.time[554], with 1 start_jobs, and 0 end_jobs
+event.time[583], with 1 start_jobs, and 0 end_jobs
+event.time[611], with 1 start_jobs, and 0 end_jobs
+event.time[645], with 1 start_jobs, and 0 end_jobs
+event.time[680], with 1 start_jobs, and 0 end_jobs
+event.time[707], with 1 start_jobs, and 0 end_jobs
+event.time[733], with 1 start_jobs, and 0 end_jobs
+event.time[761], with 1 start_jobs, and 0 end_jobs
+event.time[793], with 1 start_jobs, and 0 end_jobs
+event.time[827], with 1 start_jobs, and 0 end_jobs
+event.time[861], with 1 start_jobs, and 0 end_jobs
+event.time[892], with 1 start_jobs, and 0 end_jobs
+event.time[918], with 1 start_jobs, and 0 end_jobs
+event.time[944], with 1 start_jobs, and 0 end_jobs
+event.time[973], with 1 start_jobs, and 0 end_jobs
+event.time[1008], with 1 start_jobs, and 0 end_jobs
+event.time[1042], with 1 start_jobs, and 0 end_jobs
+event.time[1067], with 1 start_jobs, and 0 end_jobs
+event.time[1100], with 1 start_jobs, and 0 end_jobs
+event.time[1139], with 1 start_jobs, and 0 end_jobs
+event.time[1165], with 1 start_jobs, and 0 end_jobs
+event.time[1194], with 1 start_jobs, and 0 end_jobs
+event.time[1223], with 1 start_jobs, and 0 end_jobs
+event.time[1248], with 1 start_jobs, and 0 end_jobs
+event.time[1274], with 1 start_jobs, and 0 end_jobs
+event.time[1315], with 1 start_jobs, and 0 end_jobs
+event.time[1347], with 1 start_jobs, and 0 end_jobs
+event.time[1381], with 1 start_jobs, and 0 end_jobs
+event.time[1414], with 1 start_jobs, and 0 end_jobs
+event.time[1447], with 1 start_jobs, and 0 end_jobs
+event.time[1471], with 1 start_jobs, and 0 end_jobs
+event.time[1499], with 1 start_jobs, and 0 end_jobs
+event.time[1537], with 1 start_jobs, and 0 end_jobs
+event.time[1580], with 1 start_jobs, and 0 end_jobs
+event.time[1612], with 1 start_jobs, and 0 end_jobs
+event.time[1644], with 1 start_jobs, and 0 end_jobs
+event.time[1676], with 1 start_jobs, and 0 end_jobs
+event.time[1701], with 1 start_jobs, and 0 end_jobs
+event.time[1729], with 1 start_jobs, and 0 end_jobs
+event.time[1750], with 1 start_jobs, and 0 end_jobs
+event.time[1779], with 1 start_jobs, and 0 end_jobs
+ 
+---------- 离开prepare_job_start_events01(self)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[0] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[1] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[2] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[3] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[4] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+**** job[0] completed
+exe_time:  164
+jct:  164
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+**** job[1] completed
+exe_time:  147
+jct:  147
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[5] starts from pending
+-------进入cluster.release_job_res()--------
+**** job[2] completed
+exe_time:  127
+jct:  127
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[6] starts from pending
+-------进入cluster.release_job_res()--------
+**** job[3] completed
+exe_time:  121
+jct:  121
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[7] starts from pending
+-------进入cluster.release_job_res()--------
+**** job[4] completed
+exe_time:  121
+jct:  121
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[8] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[9] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[10] starts from pending
+-------进入cluster.release_job_res()--------
+**** job[6] completed
+exe_time:  121
+jct:  125
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[11] starts from pending
+-------进入cluster.release_job_res()--------
+**** job[5] completed
+exe_time:  138
+jct:  183
+-------进入cluster.release_job_res()--------
+**** job[7] completed
+exe_time:  124
+jct:  124
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[12] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[13] starts from pending
+-------进入cluster.release_job_res()--------
+**** job[9] completed
+exe_time:  126
+jct:  126
+-------进入cluster.release_job_res()--------
+**** job[8] completed
+exe_time:  155
+jct:  155
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[14] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[15] starts from pending
+-------进入cluster.release_job_res()--------
+**** job[12] completed
+exe_time:  131
+jct:  131
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[16] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+**** job[10] completed
+exe_time:  230
+jct:  230
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+**** job[14] completed
+exe_time:  121
+jct:  121
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[17] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+**** job[13] completed
+exe_time:  196
+jct:  196
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[18] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[19] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[20] starts from pending
+-------进入cluster.release_job_res()--------
+**** job[15] completed
+exe_time:  180
+jct:  180
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[21] starts from pending
+-------进入cluster.release_job_res()--------
+**** job[16] completed
+exe_time:  143
+jct:  143
+-------进入cluster.release_job_res()--------
+**** job[17] completed
+exe_time:  122
+jct:  140
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[22] starts from pending
+-------进入cluster.release_job_res()--------
+**** job[11] completed
+exe_time:  368
+jct:  368
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[23] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+**** job[19] completed
+exe_time:  125
+jct:  154
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+**** job[21] completed
+exe_time:  126
+jct:  129
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[24] starts from pending
+-------进入cluster.release_job_res()--------
+**** job[18] completed
+exe_time:  189
+jct:  217
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[25] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[26] starts from pending
+-------进入cluster.release_job_res()--------
+**** job[22] completed
+exe_time:  123
+jct:  123
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+**** job[23] completed
+exe_time:  121
+jct:  121
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[27] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[28] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+**** job[24] completed
+exe_time:  121
+jct:  154
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[29] starts from pending
+-------进入cluster.release_job_res()--------
+**** job[25] completed
+exe_time:  121
+jct:  136
+-------进入cluster.release_job_res()--------
+**** job[26] completed
+exe_time:  121
+jct:  121
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[30] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[31] starts from pending
+-------进入cluster.release_job_res()--------
+**** job[27] completed
+exe_time:  121
+jct:  129
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[32] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[33] starts from pending
+-------进入cluster.release_job_res()--------
+**** job[28] completed
+exe_time:  152
+jct:  152
+-------进入cluster.release_job_res()--------
+**** job[29] completed
+exe_time:  121
+jct:  121
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+**** job[30] completed
+exe_time:  141
+jct:  141
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+**** job[31] completed
+exe_time:  121
+jct:  121
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+**** job[32] completed
+exe_time:  125
+jct:  125
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[34] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[36] starts from pending
+-------进入cluster.release_job_res()--------
+**** job[33] completed
+exe_time:  121
+jct:  121
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+**** job[20] completed
+exe_time:  536
+jct:  564
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[35] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+**** job[36] completed
+exe_time:  123
+jct:  125
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[37] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[39] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[38] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+**** job[35] completed
+exe_time:  121
+jct:  226
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[40] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[42] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[41] starts from pending
+-------进入cluster.release_job_res()--------
+**** job[37] completed
+exe_time:  121
+jct:  213
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[43] starts from pending
+-------进入cluster.release_job_res()--------
+**** job[39] completed
+exe_time:  121
+jct:  148
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[44] starts from pending
+-------进入cluster.release_job_res()--------
+**** job[38] completed
+exe_time:  121
+jct:  176
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[45] starts from pending
+-------进入cluster.release_job_res()--------
+**** job[34] completed
+exe_time:  305
+jct:  366
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[46] starts from pending
+-------进入cluster.release_job_res()--------
+**** job[40] completed
+exe_time:  122
+jct:  196
+-------进入cluster.release_job_res()--------
+**** job[41] completed
+exe_time:  123
+jct:  174
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[47] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+**** job[45] completed
+exe_time:  121
+jct:  121
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+**** job[44] completed
+exe_time:  158
+jct:  158
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+**** job[46] completed
+exe_time:  121
+jct:  121
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+**** job[43] completed
+exe_time:  209
+jct:  248
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+**** job[42] completed
+exe_time:  263
+jct:  283
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[48] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+**** job[47] completed
+exe_time:  121
+jct:  121
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[49] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[50] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[51] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+**** job[48] completed
+exe_time:  126
+jct:  210
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[52] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[54] starts from pending
+-------进入cluster.release_job_res()--------
+**** job[50] completed
+exe_time:  126
+jct:  164
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[53] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+**** job[51] completed
+exe_time:  130
+jct:  173
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+**** job[52] completed
+exe_time:  121
+jct:  198
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[55] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[56] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+**** job[53] completed
+exe_time:  121
+jct:  172
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+**** job[54] completed
+exe_time:  171
+jct:  184
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[57] starts from pending
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[59] starts from pending
+-------进入cluster.release_job_res()--------
+**** job[56] completed
+exe_time:  133
+jct:  211
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+-------进入cluster.release_job_res()--------
+**** job[55] completed
+exe_time:  135
+jct:  237
+---------- 进入try_get_job_res(job)
+---------- FLAGS01.scheme= count
+---------- 离开try_get_job_res(job)
+----job[58] starts from pending
+-------进入cluster.release_job_res()--------
+**** job[59] completed
+exe_time:  122
+jct:  171
+-------进入cluster.release_job_res()--------
+**** job[57] completed
+exe_time:  128
+jct:  227
+-------进入cluster.release_job_res()--------
+**** job[58] completed
+exe_time:  122
+jct:  285
+-------进入cluster.release_job_res()--------
+**** job[49] completed
+exe_time:  1800
+jct:  1864
+average jct of scheduler lpjf is 205
+makespan of scheduler lpjf is 3335

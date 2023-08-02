@@ -1,0 +1,3 @@
+time,idle_node,busy_node,full_node,idle_gpu,busy_gpu,pending_job,running_job,completed_job
+0,0,0,0,0,0,1,0,0
+30,0,0,0,0,0,2,0,0
